@@ -1,5 +1,4 @@
 name: Comment-mobile-files-changed
-
 on: 
   pull_request:
     types:
