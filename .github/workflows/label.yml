@@ -1,0 +1,21 @@
+name: Comment-mobile-files-changed
+on: 
+  pull_request:
+    types:
+      - opened
+    paths:
+      - 'blog/fixtures/**'
+
+jobs:
+  comment_mobile_files_changed:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+    - uses: mshick/add-pr-comment@v2
+      with:
+          message: |
+            **Attantion!**
+          message-failure: |
+            Update doc with mibile App changes!
